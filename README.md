@@ -1,4 +1,4 @@
-# Django Twitter Clone
+# Django Anime-Tweeter
 
 This is a simple Twitter-like application built with Django. It allows users to create, edit, delete, and search for tweets. Additionally, users can register and log in to manage their tweets.
 
