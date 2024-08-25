@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h3 class="mb-4 mt-4 fw-bold">Search results for "{{query}}"</h3>
+
+    {% if tweets %}
+        <div class="container row gap-3">
+            {% for tweet in tweets %}
+            <div
+                class="card p-1 position-relative"
+                style="width: 20rem; min-height: 30rem"
+            >
+                <img
+                src="{{tweet.image.url}}"
+                class="card-img-top"
+                alt="..."
+                style="height: 250px"
+                />
+                <div class="card-body">
+                <h5 class="card-title text-warning">{{ tweet.title }}</h5>
+                <p class="card-text" style="font-size: 0.9rem">{{ tweet.text }}</p>
+                <div
+                    class="d-flex align-items-center gap-2 position-absolute"
+                    style="bottom: 10px"
+                >
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    {% else %}
+        <p>No results found.</p>
+    {% endif %}
+{% endblock %}
